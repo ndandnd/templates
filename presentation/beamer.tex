@@ -1,0 +1,108 @@
+% beamer 16:9
+\documentclass[aspectratio=169, 9pt, xcolor=table]{beamer}
+% suppress the navigation bar
+\beamertemplatenavigationsymbolsempty
+% add frame number to footline
+\setbeamertemplate{footline}[frame number]
+% set frame color
+% \usecolortheme[named=cyan]{structure}
+% set font serif only math
+% \usefonttheme[onlymath]{serif}
+% set font serif all
+\usefonttheme{serif}
+\usepackage{subcaption}
+% subfile - making directories for slides
+\usepackage{subfiles}
+% wrapping figures with text
+\usepackage{wrapfig}
+% table 과 figure 에 번호 붙이기
+\setbeamertemplate{caption}[numbered]
+% math package
+\usepackage{amsmath, amsthm, amssymb}
+% code 넣을 때 frame 으로 사용
+\usepackage{listings}
+% code 넣기
+% \usepackage{minted}
+% table 에 rule 넣기
+\usepackage{booktabs}
+% talbe 에 multirow 적용
+\usepackage{multirow}
+\usepackage{animate}
+\usepackage{forarray}
+% remove font size error
+\usepackage{lmodern}
+% hyperlinks
+\usepackage{hyperref}
+% foreach and other making tools with if and for loop
+\usepackage{pgffor}
+\usepackage{calc}
+\usepackage{ifthen}
+% section 만들기
+\usepackage{xparse}% http://ctan.org/pkg/xparse
+\usepackage{etoolbox}% http://ctan.org/pkg/etoolbox
+\usepackage[utf8]{inputenc}
+\bibliographystyle{apalike}
+
+\setbeamertemplate{bibliography entry title}{}
+\setbeamertemplate{bibliography entry location}{}
+\setbeamertemplate{bibliography entry note}{}
+
+\newcommand{\tred}[1]{\textcolor{red}{#1}}
+
+\DeclareMathOperator*{\argmin}{argmin}
+\DeclareMathOperator{\Tr}{Tr}
+
+\AtBeginSection[]
+{
+\begin{frame}
+\vfill
+\centering
+\usebeamerfont{section title}\insertsection
+\vfill
+\end{frame}
+}
+
+% set theme color
+\definecolor{smurf}{rgb}{0.14, 0.39, 0.78}  %%% <- Change it into the color you want
+\usecolortheme[named=smurf]{structure}      %%% <- Change it into the color you want
+
+% set title
+\title{Agent based modeling in Intensive Care Units}
+\author{Nathan Cho}
+\institute{Computational Science and Engineering}
+\date{\today}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%START%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{frame}
+    \frametitle{Plot for 20 days}
+    \begin{centering}
+    \includegraphics[width = \textwidth]{d:/research/abm/result/20day_2HCW3Pat.png} %change to absolute path of your image file
+    \end{centering}
+Notice that every 5 days the HCWs become uncolonized.
+\end{frame}
+
+\begin{frame}
+    \frametitle{To do}
+    \begin{enumerate}
+    \item Work on real time plots and moving HCWs.
+    \item Batch run many times and plot the average.
+    \item Create environment class (a spot on the grid)
+    \item Figure out a way to hold patients in place
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{References} % allowframebreaks divide the pages when the reference list is more thant one page.
+    \bibliography{ref}
+\end{frame}
+
+\end{document}
+
+
+
