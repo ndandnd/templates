@@ -2,6 +2,7 @@
 
 Template for hw assignments and for presentation
 
-1. Download miktex here https://miktex.org/download
-2. Edit codes with an editor (like vscode)
-3. Drawing is hard with latex, so it's better to import after creating one with another program.
+1. download latex here: https://tug.org/texlive/acquire-netinstall.html
+2. Open tex files with vscode. Get the latex latex workshop from marketplace.
+
+**Drawing is hard with latex, so it's better to import after creating one with another program.**
