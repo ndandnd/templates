@@ -15,7 +15,7 @@ np.random.seed(lucky_number)
 
 
 captains = ["김기환", "조나단", "조예람", "이하나"] # Captains have proof of victory
-s_tier = ["조안나","정예종","윤하영"] # Tier A players claim, but have no proof of victory. They should not be in same group
+s_tier = ["조안나","정예종","윤하영"] # S-Tier players claim, but have no proof of victory. They should not be in same group
 
 competitors = [
 "이민정",
