@@ -1,0 +1,1 @@
+all_players = pd.Series(all_players)
